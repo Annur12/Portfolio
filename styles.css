@@ -6,12 +6,14 @@
 
 html {
     font-size: 18px;
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Quicksand', sans-serif;
     color: #fff;
     background: linear-gradient(to right,#00C4CC, #252525);
+    overflow-x: hidden;
 }
 
 #wrapper {
@@ -112,13 +114,14 @@ section {
 }
 
 .nav-links li:hover {
-    transform: rotate(15deg); /* Rotate the element on hover */
+    transform: rotate(15deg);
     transition: transform 0.3s ease-in-out;
 }
 
 
 section .container h3 {
    margin-bottom: 10rem;
+   font-size: 2rem;
 }
 
 .my-skills {
@@ -151,13 +154,49 @@ section .container h3 {
 
 .hidden {
     opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-100%);
-    transition: all 1s;
+    
+    transition: all 3s;
 }
 
 .show {
     opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
+    
+}
+
+.row-works {
+    width: 400px;
+}
+
+.my-works {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.row-works img {
+    width: 100%;
+    height: 250px;
+    transition: all 0.3s ease;
+}
+
+.row-works img:hover {
+    transform: scale(1.2);
+}
+
+.row-works p {
+    margin-bottom: 18px;
+}
+
+.row-works a {
+    color: #fff;
+    font-size: 1rem;
+    padding: 8px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid #00C4CC;
+    transition: text-decoration 0.3s ease;
+}
+
+.row-works a:hover {
+    text-decoration: underline;
 }
