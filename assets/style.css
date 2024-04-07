@@ -197,6 +197,14 @@ body {
     letter-spacing: 2px;
 }
 
+.cv {
+    color: #f2f2f2;
+    padding: 8px 18px;
+    background-color: transparent;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
 .lines {
     width: 350px;
     height: 1px;
@@ -298,7 +306,7 @@ h2, .rows img {
 
 .button {
     position: absolute;
-    top: 60%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
@@ -306,13 +314,13 @@ h2, .rows img {
 }
 
 .button a {
-    padding: 8px 20px;
+    padding: 7px 20px;
     color: #f2f2f2;
     text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
     border-radius: 5px;
-    box-shadow: rgba(255, 255, 255, 1) 0px 4px 8px -2px, rgba(255, 255, 255, 1) 0px 0px 0px 1px;
+    border: 1px solid #00c4cc;
 }
 
 .rows:hover .button {

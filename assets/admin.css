@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Quicksand", sans-serif !important;
+    overflow-x: hidden;
+    font-size: 16px;
+}
+
+.hover a {
+    transition: color 0.3s ease;
+}
+
+.hover a:hover {
+    color: #00c4cc;
+}
+
+.hover a:active {
+    color: #00c4cc;
+}
+
+.small {
+    font-size: 0.8rem;
+}
+
+.border-top {
+    border-color: #00c4cc !important;
+}
+
+table {
+    text-align: center;
+}
+
+.delete {
+    color: #ff3131;
+}
+
+.edit {
+    color: #00bf63;
+}
+
+.delete:hover, .edit:hover {
+    opacity: 0.8;
+    transition: 0.3s ease;
+}
+
+.bi-alexa {
+    color: #00c4cc;
+}
+
+.wrap-detail {
+    background-color: rgba(37, 37, 37, 0.9);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.8);
+}
+
+.name-detail {
+   display: flex;
+   gap: 10px;
+}
+
+.name-detail p {
+    padding: 5px 0;
+}
+
+p {
+    color: #f1f1f1;
+    margin: 0;
+}
+
+.name-detail .color {
+    color: #00c4cc;
+    font-weight: 700;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+    border: none;
+}
+
+.button .redBtn, .button .greenBtn {
+    padding: 6px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    background-color: transparent;
+    box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.8);
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.greenBtn {
+    color: #00bf63;
+}
+
+.redBtn {
+    color: #ff3131;
+}
+
+.button .redBtn:hover, .button .greenBtn:hover {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.wrap-detail .description {
+    width: 55%;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+.work-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.works {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+img {
+    width: 100%;
+}
+
+.card {
+    background-color: rgba(37, 37, 37, 0.9);
+    padding: 10px;
+    text-align: center;
+}
+
+.card h4 {
+    font-size: 1rem;
+    color: #f1f1f1;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.card h4 span {
+    font-size: 0.8rem;
+    color: #00c4cc;
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.skills-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.skills span {
+    color: #f1f1f1;
+    padding: 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 2px 2px 2px #00c4cc;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.skills span:hover {
+    box-shadow: 2px 5px 2px #00c4cc;
+}

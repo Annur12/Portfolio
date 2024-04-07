@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 24px;
+}
+
+header i {
+    padding-top: 24px;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 24px;
+    color: #00c4cc;
+}
+
+.main-container {
+    flex: 1 0 auto;
+    min-height: 0;
+    display: grid;
+    box-sizing: border-box;
+    grid-template-rows: [ left-start center-start right-start ] 1fr [ left-end center-end right-end ];
+    grid-template-columns: [ left-start center-start ] 1fr [ left-end right-start ] 1fr [ center-end right-end ];
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    grid-column-gap: 160px;
+    column-gap: 160px;
+    padding: 80px;
+    width: 100%;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    white-space: normal;
+    border-radius: 5px;
+    position: relative;
+    grid-area: center;
+    box-shadow: none;
+    vertical-align: baseline;
+    box-sizing: content-box;
+}
+
+.title-wrapper {
+    padding: 40px 40px 24px;
+    box-sizing: content-box;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.title-wrapper h1 {
+    font-size: 32px;
+    font: "Söhne";
+    margin: 24px 0 0;
+    color: #2d333a;
+    width: 320px;
+    text-align: center;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 0 40px 40px;
+    border-radius: 3px;
+    box-shadow: none;
+    width: 320px;
+    box-sizing: content-box;
+    flex-shrink: 0;
+}
+
+.input-wrapper {
+    position: relative;
+    margin-bottom: 25px;
+    width: 320px;
+    box-sizing: content-box
+}
+
+.input {
+    width: 100%;
+    height: 52px;
+    line-height: 1.1;
+    outline: none;
+    border: 1px solid #00c4cc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #2d333a;
+    font-family: inherit;
+    font-size: 16px;
+    height: 52px;
+    line-height: 1.1;
+    outline: none;
+    padding-block:1px;padding-inline:2px;padding: 0 16px;
+}
+
+.button {
+    width: 320px;
+    height: 52px;
+    border: none;
+    outline: none;
+    background-color: #00c4cc;
+    color: #fff;
+    border-radius: 5px;
+    padding: 4px 16px;
+}
+
+.other-page {
+    text-align: center;
+    font-size: 14px;
+    width: 320px;
+    margin-top: 16px;
+    margin-bottom: 0;
+}
+
+.link {
+    padding: 4px;
+}
+
+a {
+    font-weight: 400;
+    color: #00c4cc;
+    text-decoration: none;
+}
