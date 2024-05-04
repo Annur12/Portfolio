@@ -1,35 +1,34 @@
 <?php
-
 session_start();
-
 include_once '../connection/connect.php';
-
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Define username and password
     $username = $_POST['username'];
     $password = $_POST['password'];
-
-    // SQL injection prevention: sanitize user inputs
+    
     $username = $conn->real_escape_string($username);
-    $password = $conn->real_escape_string($password);
 
-    // Query to fetch user details from database
-    $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
-    $result = $conn->query($sql);
+    $stmt = $conn->prepare("SELECT password FROM users WHERE username = ?");
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $user = $result->fetch_assoc();
 
-    if ($result->num_rows == 1) {
-        // Authentication successful, set session variables
+    if ($user && password_verify($password, $user['password'])) {
+        
         $_SESSION['username'] = $username;
 
-        // Redirect to a protected page
-        header("Location: dashboard.php");
+        header("Location: about.php");
         exit;
     } else {
         // Authentication failed, redirect back to login page with error message
         header("Location: login_form.html?error=1");
         exit;
     }
+
+    // Close statement
+    $stmt->close();
 }
 ?>
 
